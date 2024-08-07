@@ -39,6 +39,7 @@ body {
    font-size: 18px;
    line-height: 28px;
    background-color: var(--body-bg-color);
+   color: var(--primary-text-color)
 }
 
 .container {
@@ -103,15 +104,119 @@ body {
    color: var(--primary-text-color);
    /* border-image: linear-gradient( to right,  var(--btn-bg-color-first), var(--btn-bg-color-second));
    width: 100%; */
+   /* TODO I should add border bottom correctly */
 }
 
 .button {
-   display: block;
+   display: inline-block;
    padding: 8px 33px;
    font-size: 14px;
    font-weight: 500;
    color: var(--white-text-color);
    border-radius: 22px;
    background-image: linear-gradient( to right,  var(--btn-bg-color-first), var(--btn-bg-color-second));
+   transition: all 0.4s ease
+}
+
+.button:hover {
+   opacity: 0.8;
+}
+
+.button:active {
+   opacity: 0.6;
 }
 /* Header ends */
+
+/* Main starts */
+
+.main__hero {
+   padding: 250px 0 170px 0;
+   display: flex;
+   align-items: center;
+   position: relative;
+   background-image: url('../img/hero-bg-desktop.svg');
+   background-repeat: no-repeat;
+   background-position: calc(100% + 500px) -250px;
+   z-index: -1;
+   overflow: hidden;
+   background-size: cover;
+
+}
+
+.hero__img {
+   display: block;
+   position: absolute;
+   top: -150px;
+   left: calc(100% - 650px);
+   z-index: 99;
+}
+
+.hero__title {
+   max-width: 394px;
+   font-size: 56px;
+   line-height: 64px;
+   letter-spacing: -1px;
+   font-weight: 100;
+   margin: 0 0 24px 0;
+}
+
+.hero__text {
+   max-width: 447px;
+   width: 100%;
+   color: var(--secondary-text-color);
+   margin-bottom: 36px;
+}
+
+/* Choose */
+
+.choose {
+   background-color: var(--grey-bg-color);
+   padding: 96px 0;
+}
+
+.choose__title {
+   max-width: 411px;
+   width: 100%;
+   font-weight: 100;
+   font-size: 40px;
+   line-height: 64px;
+   margin-bottom: 16px;
+   letter-spacing: -0.71px;
+}
+
+.choose__text {
+   max-width: 635px;
+   width: 100%;
+   letter-spacing: -0.28px;
+   color: var(--secondary-text-color);
+   margin-bottom: 72px;
+}
+
+.choose__cards {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+}
+
+.card__icon {
+   display: block;
+}
+
+.card__title {
+   font-size: 24px;
+   font-weight: 100;
+   max-width: 160px;
+   width: 100%;
+   letter-spacing: -0.43px;
+   margin: 40px 0 26px 0;
+}
+.card__text {
+   color: var(--secondary-text-color);
+   max-width: 255px;
+   width: 100%;
+   font-size: 16px;
+   line-height: 26px;
+   letter-spacing: -0.25px;
+
+}
+/* Main ends */
